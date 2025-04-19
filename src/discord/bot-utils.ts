@@ -15,3 +15,7 @@ export interface BotCommand {
 export function defineBotEvent<T extends keyof ClientEvents>(botEvent: BotEvent<T>) {
     return botEvent;
 }
+
+export function defineBotCommand(botCommand: BotCommand) {
+    return botCommand;
+}
