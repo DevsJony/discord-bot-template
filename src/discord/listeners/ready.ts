@@ -45,6 +45,6 @@ export default defineBotEvent({
         console.log(`Ready! Logged in as ${client.user?.tag} in ${client.guilds.cache.size} guilds`);
 
         //client.user?.setStatus("dnd");
-        setupCustomStatus(client);
+        //setupCustomStatus(client);
     },
 });
