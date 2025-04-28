@@ -41,7 +41,7 @@ function setupCustomStatus(client: Client) {
 export default defineBotEvent({
     name: Events.ClientReady,
     once: true,
-    execute: (client: Client) => {
+    async execute(client: Client) {
         console.log(`Ready! Logged in as ${client.user!.tag} in ${client.guilds.cache.size} guilds`);
 
         //client.user!.setStatus("dnd");
