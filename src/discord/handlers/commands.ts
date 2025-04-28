@@ -1,6 +1,6 @@
 import path, { join } from "path";
 import { readdirSync } from "fs";
-import { Client, Collection, Events, REST, Routes } from "discord.js";
+import { Client, Collection, Events, MessageFlags, REST, Routes } from "discord.js";
 import { BotCommand } from "../bot-utils.js";
 import { fileURLToPath } from "url";
 
@@ -58,12 +58,12 @@ function handleSlashCommands(client: Client, commands: Collection<string, BotCom
                 if (interaction.replied || interaction.deferred) {
                     await interaction.followUp({
                         content: "There was an error while executing this command!",
-                        ephemeral: true,
+                        flags: MessageFlags.Ephemeral,
                     });
                 } else {
                     await interaction.reply({
                         content: "There was an error while executing this command!",
-                        ephemeral: true,
+                        flags: MessageFlags.Ephemeral,
                     });
                 }
             }
