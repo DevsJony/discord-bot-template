@@ -10,7 +10,7 @@ const BOT_STATUSES: ActivitiesOptions[] = [
 
 function setupCustomStatus(client: Client) {
     // Setup custom status
-    client.user?.setPresence({
+    client.user!.setPresence({
         activities: [BOT_STATUSES[0]!],
         status: "dnd",
     });
@@ -23,7 +23,7 @@ function setupCustomStatus(client: Client) {
     setInterval(
         () => {
             // Set next custom status
-            client.user?.setPresence({
+            client.user!.setPresence({
                 activities: [BOT_STATUSES[nextIndex]!],
                 status: "dnd",
             });
@@ -42,9 +42,9 @@ export default defineBotEvent({
     name: Events.ClientReady,
     once: true,
     execute: (client: Client) => {
-        console.log(`Ready! Logged in as ${client.user?.tag} in ${client.guilds.cache.size} guilds`);
+        console.log(`Ready! Logged in as ${client.user!.tag} in ${client.guilds.cache.size} guilds`);
 
-        //client.user?.setStatus("dnd");
+        //client.user!.setStatus("dnd");
         //setupCustomStatus(client);
     },
 });
