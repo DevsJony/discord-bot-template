@@ -13,14 +13,14 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^22.15.31",
+    "@types/node": "^22.15.32",
     "prettier": "^3.5.3",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3"
   },
   "dependencies": {
     "cross-env": "^7.0.3",
-    "discord.js": "^14.19.3",
+    "discord.js": "^14.20.0",
     "dotenv": "^16.5.0"
   }
 }
