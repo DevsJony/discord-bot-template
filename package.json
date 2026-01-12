@@ -7,7 +7,8 @@
   "packageManager": "pnpm@10.26.1",
   "scripts": {
     "build": "tsc",
-    "prod": "cross-env NODE_ENV=production node dist/index.js",
+    "type-check": "tsc --noEmit",
+    "prod": "cross-env NODE_ENV=production tsx .",
     "dev": "tsx .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
