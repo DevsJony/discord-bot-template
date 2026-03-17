@@ -74,15 +74,15 @@ function handleSlashCommands(client: Client, commands: Collection<string, BotCom
 
 async function registerSlashCommands(commands: Collection<string, BotCommand>) {
     // Register slash commands
-    const rest = new REST().setToken(process.env.TOKEN!);
+    const rest = new REST().setToken(process.env.DISCORD_TOKEN!);
     try {
         console.log(`Started refreshing ${commands.size} application (/) commands.`);
 
         // The put method is used to fully refresh all commands in the guild with the current set
         const data = await rest.put(
-            process.env.GUILD_ID
-                ? Routes.applicationGuildCommands(process.env.CLIENT_ID!, process.env.GUILD_ID!)
-                : Routes.applicationCommands(process.env.CLIENT_ID!),
+            process.env.DISCORD_GUILD_ID
+                ? Routes.applicationGuildCommands(process.env.DISCORD_CLIENT_ID!, process.env.DISCORD_GUILD_ID!)
+                : Routes.applicationCommands(process.env.DISCORD_CLIENT_ID!),
             {
                 body: commands.mapValues((command) => command.data.toJSON()),
             }

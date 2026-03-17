@@ -21,7 +21,7 @@ export async function runDiscordBot() {
 
     await Promise.all(handlersPromises);
 
-    await discordClient.login(process.env.TOKEN);
+    await discordClient.login(process.env.DISCORD_TOKEN);
 }
 
 export function getDiscordClient() {
