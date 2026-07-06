@@ -133,4 +133,4 @@ dist
 .idea/*
 !.idea/prettier.xml
 .playwright-mcp/
-.claude/
+.claude/settings.local.json
