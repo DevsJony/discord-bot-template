@@ -1,7 +1,7 @@
 import path, { join } from "path";
 import { readdirSync } from "fs";
-import { Client, ClientEvents } from "discord.js";
-import { BotEvent } from "../bot-utils.js";
+import { Client, type ClientEvents } from "discord.js";
+import { type BotEvent } from "../bot-utils.js";
 import { fileURLToPath } from "url";
 
 export default function loadListeners(client: Client) {

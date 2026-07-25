@@ -1,5 +1,5 @@
 import { defineBotEvent } from "../bot-utils.js";
-import { ActivitiesOptions, Client, Events, ActivityType } from "discord.js";
+import { type ActivitiesOptions, Client, Events, ActivityType } from "discord.js";
 
 const BOT_STATUSES: ActivitiesOptions[] = [
     {

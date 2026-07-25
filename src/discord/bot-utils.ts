@@ -1,4 +1,4 @@
-import { ChatInputCommandInteraction, Client, ClientEvents, SlashCommandBuilder, AutocompleteInteraction } from "discord.js";
+import { ChatInputCommandInteraction, Client, type ClientEvents, SlashCommandBuilder, AutocompleteInteraction } from "discord.js";
 
 export interface BotEvent<K extends keyof ClientEvents> {
     name: K;

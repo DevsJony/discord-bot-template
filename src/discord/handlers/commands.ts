@@ -1,7 +1,7 @@
 import path, { join } from "path";
 import { readdirSync } from "fs";
 import { Client, Collection, Events, MessageFlags, REST, Routes } from "discord.js";
-import { BotCommand } from "../bot-utils.js";
+import { type BotCommand } from "../bot-utils.js";
 import { fileURLToPath } from "url";
 
 export default async function loadCommands(client: Client) {
